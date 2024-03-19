@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:interactive_rating_component/widgets/number_buttons.dart';
-import 'package:interactive_rating_component/widgets/submit_button.dart';
+import 'package:interactive_rating_component/widgets/constants.dart';
 
 class SecondPage extends StatefulWidget {
   final int number;
@@ -33,7 +32,7 @@ class _SecondPageState extends State<SecondPage> {
               child: Column(
                 children: [
                  const SizedBox(height: 38),
-                 SvgPicture.asset("images/illustration-thank-you.svg"),
+                 SvgPicture.asset(imagePathThankYou),
                  const SizedBox(height: 27),
                  Container(
                    height: 33,
@@ -48,10 +47,9 @@ class _SecondPageState extends State<SecondPage> {
                  )
                  ),
                   const SizedBox(height: 20),
-                  const Text("Thank you!", style: TextStyle(fontSize: 27, color: Colors.white, fontWeight: FontWeight.bold)),
+                  Text(thankYou, style: const TextStyle(fontSize: 27, color: Colors.white, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 20),
-                  const Text("We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!",
-                      textAlign: TextAlign.center, style: TextStyle(fontSize: 16, color: Colors.white))
+                  Text(secondPagePara, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, color: Colors.white))
                 ],
               ),
             ),

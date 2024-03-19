@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:interactive_rating_component/widgets/IconStarWidget.dart';
+import 'package:interactive_rating_component/widgets/constants.dart';
 import 'package:interactive_rating_component/widgets/number_buttons.dart';
 import 'package:interactive_rating_component/widgets/submit_button.dart';
 
@@ -33,22 +34,11 @@ class _MainContentState extends State<MainContent> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xff272E38),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      height: 50,
-                      width: 50,
-                      child: Transform.scale(
-                        scale: 0.3, // Adjust this value as needed
-                        child: SvgPicture.asset("images/icon-star.svg"),
-                      ),
-                    ),
+                    const IconStar(),
                     const SizedBox(height: 20),
-                    const Text("How did we do?", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: "Sans-Serif")),
+                    Text(title, style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: "Sans-Serif")),
                     const SizedBox(height: 20),
-                    const Text("Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!", style: TextStyle(fontSize: 15, color: Colors.white)),
+                    Text(paragraph, style: const TextStyle(fontSize: 15, color: Colors.white)),
                     const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
